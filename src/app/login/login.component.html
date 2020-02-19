@@ -1,0 +1,45 @@
+<form class="form-signin text-center" [formGroup]="registerForm">
+	<img class="mb-1" src="assets/img/factura-smith.svg" alt="" height="">
+	 <h1 class="h3 mb-3 font-weight-normal">Acceso - Inv Proveedores</h1> 
+	<div class="form-label-group">
+		<label for="username" class="sr-only">Usuario</label>
+		<input type="text" id="username" class="form-control" required name="username" [formControl]="usernameControl"
+			[ngClass]="{ 'is-invalid': submitted && usernameControl.errors }" 
+			placeholder="Usuario">
+	</div>
+	<div class="form-label-group">
+		<label for="inputPassword" class="sr-only">Password</label>
+		<input type="password" id="inputPassword" name="password" class="form-control input-sm"
+			[formControl]="passwordControl" [ngClass]="{ 'is-invalid': submitted && passwordControl.errors }"
+		   required placeholder="Contraseña">
+	</div>
+
+	<!-- 								<div *ngIf="true" class="invalid-feedback form-label-group">
+									<div>{{validationMessage}} g</div>
+								</div> -->
+
+	<!-- <div *ngIf="token==null"> {{validationMessage}} hola</div>
+								<div class="checkbox mb-3">
+								  <label>
+									<input type="checkbox" value="remember-me"> Recordarme								  </label>
+								</div> -->
+								<!-- <app-recaptcha></app-recaptcha> -->
+	<!--<div *ngIf="mostrar">						
+	<form #declarativeForm="ngForm">
+		<re-captcha [(ngModel)]="declarativeFormCaptchaValue" name="captcha" required></re-captcha>
+	</form>
+								<br>
+	<button [disabled]="!declarativeForm.valid"class="btn btn-lg btn-outline-primary btn-block" (click)="login()">Ingresar</button>
+   </div> -->
+
+  <!--<div *ngIf="!mostrar"> -->						
+									<br>
+	<button class="btn btn-lg btn-outline-primary btn-block" (click)="login()">Ingresar</button>
+ 
+ <!--</div> -->	
+	<!--<ngb-alert [dismissible]="false" *ngFor="let msg of lstAlarmas" class="left" >
+		{{msg}}
+	</ngb-alert> -->
+	<p class="mt-3 mb-3 text-muted">Todos los derechos reservados - Proyecto Smith ©{{ year }}</p>
+
+</form>

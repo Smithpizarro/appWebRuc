@@ -1,0 +1,102 @@
+<app-menu></app-menu>
+<main role="main" class="container">
+  <div class="pt-4">
+    <div class="container" style="font-size:small">
+      <div class="row">
+        <div class="col-md-12 order-md-1">
+
+          <div>
+            <div class="card box-shadow border-primary">
+              <div class="card-header text-primary">
+                <h5 class="my-0 font-weight-normal">Consulta  de Rucs </h5>
+              </div>
+
+              <div class="card-body">
+
+               <div class="row pb-md-1">
+             
+              <!--  <div class="d-flex justify-content-end py-1">
+                  <span><button class="btn btn-sm  btn-outline-primary pt-2 mr-1"
+                      (click)="added()">
+                      Buscar
+                    </button></span>
+                  </div> -->
+                  
+                  <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Ingresar Ruc" aria-label="ingresar Ruc" aria-describedby="button-addon2" maxlength="11"  #ruc >
+                    <div class="input-group-append">
+                      <button class="btn btn-sm  btn-outline-primary" type="button" id="button-addon2"
+                      (click)="added(ruc.value)">Buscar</button>
+                    </div>
+                  </div>
+
+                 <!-- <div class="col-md-4">
+                  <div class="d-flex justify-content-end py-2">
+                      <span><button class="btn btn-sm  btn-outline-primary pt-2 mr-1"
+                          (click)="added()">
+                         Agregar 
+                        </button></span>
+                
+                    </div> 
+                    </div> -->
+                </div>
+                 
+                <div class="row pb-md-1">
+               
+                </div>
+             <!--   <div class="table-responsive-sm">
+                  <table id="tablaToConvert" class="table table-bordered table-hover table-sm">
+                    <thead>
+                     
+                      <tr class="text-center">
+                        <th scope="col">Id</th>
+                        <th scope="col">Nombre</th>
+                        <th scope="col">Apellido</th>
+                        <th scope="col">Edad</th>
+                        <th scope="col">Fecha de nacimiento</th>
+                        <th scope="col">Edad Muerte</th>
+                       
+                        <th scope="col">Acciones</th>
+                      </tr> 
+                    </thead>
+                    <tbody>
+
+                      <tr  class="text-center" *ngFor="let cliente of clientecollection.listaCliente">
+                        <td>{{cliente.clienteId}}</td>
+                        <td>{{cliente.nombre}}</td>
+                        <td>{{cliente.apellido}}</td>
+                        <td>{{cliente.edad}}</td>
+                        <td>{{cliente.fecha_nacimiento}}</td>
+                        <td>{{cliente.edad_muerte}}</td>
+                      
+                        
+                        <td>
+                          <button type="button" class="btn btn-outline-secondary btn-sm" (click)="updated()"><i-feather name="edit"></i-feather></button>
+                          <button type="button" class="btn btn-outline-danger btn-sm" (click)="delete(cliente.clienteId)"><i-feather name="delete"></i-feather></button>
+                        </td>
+                      </tr> 
+
+
+                    </tbody>
+                  </table>
+                </div>  -->
+
+                
+              </div>
+
+            </div>
+          </div>
+
+          <div class="pt-2">
+            <ngb-pagination class="d-flex justify-content-end" [collectionSize]="clientecollection.paginacion.cantidadPaginas*10" size="sm" [(page)]="pages"
+              aria-label="Default pagination" (pageChange)="loadPage($event)"></ngb-pagination> 
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+
+<app-footer></app-footer>
